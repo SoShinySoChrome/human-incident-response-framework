@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Human Incident Response Framework</title>
+<meta name="description" content="A practitioner wellbeing framework for cybersecurity operations. Four injuries, four zones, and what to do about them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14161c;
+    --paper:#fbfbf9;
+    --rule:#d3d7de;
+    --muted:#586074;
+    --navy:#0f3460;
+    --green:#2e7d32;
+    --yellow:#e0a008;
+    --orange:#e06a10;
+    --red:#8b0000;
+    --measure:34rem;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"IBM Plex Serif",Georgia,serif;
+    font-size:1.0625rem; line-height:1.65;
+    font-feature-settings:"kern" 1;
+  }
+  h1,h2,h3,.sans{font-family:"IBM Plex Sans",system-ui,sans-serif}
+  a{color:var(--navy); text-underline-offset:.18em; text-decoration-thickness:.06em}
+  a:hover{color:var(--red)}
+  a:focus-visible{outline:2px solid var(--navy); outline-offset:3px; border-radius:2px}
+  .wrap{max-width:64rem; margin:0 auto; padding:0 1.75rem}
+  .measure{max-width:var(--measure)}
+
+  /* ---- crisis bar: functional, not decorative ---- */
+  .crisis{background:#fdf3f3; border-bottom:3px solid var(--red)}
+  .crisis .wrap{padding-top:1.1rem; padding-bottom:1.1rem}
+  .crisis p{margin:0; font-size:.95rem; line-height:1.55}
+  .crisis .lead{font-family:"IBM Plex Sans",sans-serif; font-weight:600; color:var(--red); margin-bottom:.28rem}
+  .crisis a{color:var(--red); font-weight:500}
+  .crisis .fine{color:var(--muted); font-size:.86rem; margin-top:.35rem}
+
+  /* ---- hero ---- */
+  header.hero{padding:4.5rem 0 3rem}
+  h1{
+    font-size:clamp(2.1rem,5.4vw,3.35rem); font-weight:600; line-height:1.08;
+    letter-spacing:-.022em; margin:0 0 1rem; max-width:18ch;
+  }
+  .standfirst{font-size:1.2rem; line-height:1.55; color:var(--muted); margin:0; max-width:44ch}
+
+  /* ---- the continuum: the one bold element ---- */
+  .continuum{margin:3.25rem 0 0}
+  .band{display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--ink)}
+  .band div{height:2.6rem}
+  .band .z1{background:var(--green)}
+  .band .z2{background:var(--yellow)}
+  .band .z3{background:var(--orange)}
+  .band .z4{background:var(--red)}
+  .band div + div{border-left:1px solid var(--ink)}
+  .bandkeys{display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:.7rem}
+  .bandkeys dt{font-family:"IBM Plex Sans",sans-serif; font-weight:600; font-size:.94rem; margin:0}
+  .bandkeys dd{margin:.15rem 1rem 0 0; font-size:.88rem; line-height:1.45; color:var(--muted)}
+  .bandnote{margin-top:1.4rem; font-size:.95rem; color:var(--muted); max-width:56ch}
+
+  /* ---- sections ---- */
+  section{padding:3.5rem 0; border-top:1px solid var(--rule)}
+  h2{font-size:1.42rem; font-weight:600; letter-spacing:-.012em; margin:0 0 1.1rem}
+  h3{font-size:1.02rem; font-weight:600; margin:0 0 .2rem}
+  p{margin:0 0 1rem}
+  p:last-child{margin-bottom:0}
+
+  /* injuries: a definition list, not cards */
+  .injuries{margin:0; display:grid; gap:1.6rem}
+  @media(min-width:46rem){.injuries{grid-template-columns:1fr 1fr; gap:1.9rem 3rem}}
+  .injury{border-left:2px solid var(--navy); padding-left:1.1rem}
+  .injury p{margin:0; font-size:1rem; line-height:1.6; color:var(--muted)}
+
+  /* documents */
+  .docs{display:grid; gap:1.5rem; margin-top:.4rem}
+  @media(min-width:46rem){.docs{grid-template-columns:1fr 1fr; gap:2.4rem}}
+  .doc h3{margin-bottom:.35rem}
+  .doc p{font-size:.98rem; color:var(--muted); margin-bottom:.7rem}
+  .doc .meta{font-family:"IBM Plex Sans",sans-serif; font-size:.85rem; color:var(--muted)}
+  .get{display:inline-block; margin-top:1.9rem; font-family:"IBM Plex Sans",sans-serif;
+       font-weight:600; font-size:.97rem; background:var(--navy); color:#fff;
+       padding:.72rem 1.35rem; text-decoration:none; border-radius:2px}
+  .get:hover{background:var(--ink); color:#fff}
+  .get:focus-visible{outline:2px solid var(--ink); outline-offset:3px}
+
+  .limits{border-left:2px solid var(--red); padding-left:1.15rem}
+  .limits strong{font-weight:600}
+
+  footer{border-top:1px solid var(--rule); padding:2.75rem 0 3.5rem; font-size:.9rem; color:var(--muted)}
+  footer h2{font-size:1.02rem; margin-bottom:.8rem; color:var(--ink)}
+  footer p{margin-bottom:.85rem; max-width:70ch}
+  code{font-family:"IBM Plex Sans",monospace; font-size:.93em; background:#eef0f3; padding:.1em .35em; border-radius:2px}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="crisis">
+  <div class="wrap">
+    <p class="lead">If you or someone you know needs help right now</p>
+    <p>
+      United States: call or text <strong>988</strong>, or call <strong>911</strong>.
+      Anywhere: <a href="https://findahelpline.com">findahelpline.com</a> lists free, confidential support lines by country.
+      US veterans and service members: call <strong>988</strong>, then press <strong>1</strong>.
+    </p>
+    <p class="fine">You don't need to read anything on this page first.</p>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>The Human Incident Response Framework</h1>
+    <p class="standfirst">Cybersecurity has one word for what this work does to people, and it's the wrong word for most of it.</p>
+
+    <div class="continuum">
+      <div class="band" role="img" aria-label="A four-zone severity continuum running from green through yellow and orange to red.">
+        <div class="z1"></div><div class="z2"></div><div class="z3"></div><div class="z4"></div>
+      </div>
+      <dl class="bandkeys">
+        <div><dt>Ready</dt><dd>Recovering between exposures</dd></div>
+        <div><dt>Reacting</dt><dd>Distress that still resolves</dd></div>
+        <div><dt>Injured</dt><dd>Not resolving on its own</dd></div>
+        <div><dt>Crisis</dt><dd>Past what a colleague can hold</dd></div>
+      </dl>
+      <p class="bandnote">Four severity states, adapted from military stress doctrine. The framework gives you a way to see movement between them, and tells you what to do at each one.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Four injuries, filed under one word</h2>
+    <div class="injuries">
+      <div class="injury">
+        <h3>Burnout</h3>
+        <p>Workload injury. Rest and structural change fix it. It's the only one of the four that responds to time off.</p>
+      </div>
+      <div class="injury">
+        <h3>Secondary traumatic stress</h3>
+        <p>Comes from exposure to what happened to other people. Rest does nothing for it.</p>
+      </div>
+      <div class="injury">
+        <h3>Vicarious trauma</h3>
+        <p>A slow change in how you see the world, accumulated across years rather than incidents.</p>
+      </div>
+      <div class="injury">
+        <h3>Moral injury</h3>
+        <p>Being party to something you believe was wrong, or being stopped from doing what you believed was right.</p>
+      </div>
+    </div>
+    <p style="margin-top:1.9rem; max-width:62ch; color:var(--muted)">
+      Each has a different cause, a different signal, and a different fix. Calling all four burnout means three of them get the wrong treatment, and the people carrying them conclude that nothing works.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The documents</h2>
+    <div class="docs">
+      <div class="doc">
+        <h3>The Framework</h3>
+        <p>The complete work. Four injuries, four zones, six exposure drivers, the check-in protocol, escalation, the organizational layer, and the full source list.</p>
+        <p class="meta">49 pages &nbsp;/&nbsp; PDF, HTML, Word, mobile</p>
+      </div>
+      <div class="doc">
+        <h3>The Field Guide</h3>
+        <p>The practitioner half, built for one person acting alone with no program and no mandate. Everything except the role-exposure map and the organizational layer.</p>
+        <p class="meta">60 pages &nbsp;/&nbsp; PDF, HTML, Word, mobile</p>
+      </div>
+    </div>
+    <a class="get" href="../../releases/latest">Download the latest release</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap measure">
+    <h2>Who it's for</h2>
+    <p>Anyone in a high-exposure security role, and anyone responsible for people in one. Threat intelligence, incident response, digital forensics, security operations, vulnerability research, trust and safety.</p>
+    <p>It's written to be usable by an individual with no budget, no program, and no institutional backing. That case is the whole reason the Field Guide exists.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What it can't do</h2>
+    <div class="limits measure">
+      <p>This is a detection aid. It isn't a safety system and shouldn't be treated as one.</p>
+      <p>People can be in serious trouble with none of these indicators present. Someone can hold a normal conversation, hit every deadline, answer a check-in honestly by their own reckoning, and still be nowhere near all right. Someone can also decline to tell you anything, and that's their right.</p>
+      <p>Peer support sits alongside clinical care and crisis services. It replaces neither, and it doesn't turn a colleague into a safety net.</p>
+      <p><strong>If you are worried about someone right now, don't run a protocol.</strong> Use the numbers at the top of this page.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap measure">
+    <h2>Before you use it</h2>
+    <p>Read the framework first, then get trained. Two bodies of work sit underneath everything in it, and they're structured differently from each other.</p>
+    <p><a href="https://www.ptsd.va.gov/professional/treat/type/stress_first_aid.asp">Stress First Aid</a> is a published model rather than a certification. The manuals are free from the National Center for PTSD. Instruction is available from several institutions, including Duke University's School of Nursing and the Schwartz Center for Compassionate Healthcare.</p>
+    <p><a href="https://www.mentalhealthfirstaid.org">Mental Health First Aid</a> is a formal certification course delivered by licensed providers, free in many jurisdictions. Outside the United States, find your country's program at <a href="https://mhfainternational.org">mhfainternational.org</a>.</p>
+    <p>The framework gives you vocabulary and a protocol. It can't give you the judgment that comes from training.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap measure">
+    <h2>Corrections and contributions</h2>
+    <p>Disagreements, adaptations, and arguments about where this gets something wrong are all welcome. Open an issue.</p>
+    <p>Every empirical claim has been checked against its primary source, and several were cut or rewritten when they didn't survive that check. If you think a citation is wrong, say which one and what it should say. The role-to-injury mapping is explicitly clinical inference rather than empirical finding, and challenges to it are the most useful thing anyone can send.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>Notices</h2>
+    <p><strong>Published in a personal capacity.</strong> This is the work of Joe Marshall, written and published independently. The views in it are the author's own. They aren't the views of, and haven't been reviewed, approved, or endorsed by, any current or former employer or affiliated organization. Any affiliation stated elsewhere is for identification only.</p>
+    <p><strong>Academic discussion and informational purposes.</strong> These documents are intended for academic discussion and informational purposes only. They don't constitute professional, legal, or medical advice, aren't a substitute for professional diagnosis, treatment, or clinical judgment, and none of it should be used to diagnose anyone. Consult appropriate professionals before acting on anything here.</p>
+    <p><strong>No duty of care and no standard of care.</strong> Publishing this creates no duty, no advisory relationship, and no obligation to update or maintain it. Nothing in it establishes, or is intended to establish, a standard of care, a benchmark, an industry practice, or any measure against which the conduct of any organization or individual may be assessed.</p>
+    <p><strong>Vignettes are fictionalized.</strong> The personas and scenarios are fictionalized accounts, constructed from documented clinical presentations in the published literature and from general practitioner experience. They don't depict any specific person, organization, or incident.</p>
+    <p>Contact: humanirframework [at] gmail [dot] com. I can't provide individual support. I'm not a clinician, I'm not trained to help someone in crisis, and the address isn't monitored.</p>
+    <p><strong>Licence.</strong> This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a>. Share it, adapt it, translate it, use it commercially, with credit. Attribute as: The Human Incident Response Framework, Joe Marshall, CC BY 4.0. The licence covers reuse and doesn't affect the disclaimers above.</p>
+    <p>Complete notices are in the framework itself.</p>
+  </div>
+</footer>
+
+</body>
+</html>
