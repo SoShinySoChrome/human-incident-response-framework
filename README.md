@@ -32,7 +32,7 @@ Adjacent professions solved this decades ago. This framework borrows their work.
 
 - **Human_IR_Framework.pdf / .html / .docx / _mobile.html** — The complete framework. Four injuries, four zones, six exposure drivers, the role-to-injury map, the check-in protocol, escalation, the organizational layer, and the full source list. 50 pages.
 
-- **Human_IR_Field_Guide.pdf / .html / .docx / _mobile.html** — The practitioner half, built for one person acting alone with no program and no mandate. Everything except the role-by-role exposure map and the organizational layer. 51 pages.
+- **Human_IR_Field_Guide.pdf / .html / .docx / _mobile.html** — The practitioner half, built for one person acting alone with no program and no mandate. Everything except the role-by-role exposure map and the organizational layer. 43 pages.
 
 - **Human_IR_Playbook.pdf / .html / .docx** — A two-page operational card. Zones, the four injuries and their different fixes, the seven C's, what to say and what not to say, escalation triggers, and where to route. No argument, no citations. 2 pages.
 

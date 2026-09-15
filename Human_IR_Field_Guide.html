@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>The Human Incident Response Field Guide v0.8</title>
+<title>The Human Incident Response Field Guide v1.1</title>
 <style>
 @page {
   size: Letter;
   margin: 0.8in 0.85in 0.9in 0.85in;
   @bottom-center {
-    content: "Human Incident Response Field Guide v0.8 — " counter(page);
+    content: "Human Incident Response Field Guide v1.1 — " counter(page);
     font-family: "DejaVu Sans", Helvetica, Arial, sans-serif;
     font-size: 8pt;
     color: #6b7280;
@@ -149,7 +149,7 @@ li { margin-bottom: 0.33em; }
 <h1>THE HUMAN INCIDENT<br>RESPONSE FIELD GUIDE</h1>
 <div class="sub">The practitioner half of the Human Incident Response Framework</div>
 <div class="byline">Joe Marshall</div>
-<div class="ver">v0.8</div>
+<div class="ver">v1.1</div>
 <div class="abstract">
 This proposed framework adapts validated psychological stress models from the US military, social work, emergency medicine, and child welfare into cybersecurity operational vocabulary. It offers practitioners, peer responders, and team leads a shared severity language, injury taxonomy, exposure mapping, check-in cadence, escalation protocol, and organizational assessment approach for managing the human cost of sustained high-exposure security work.
 </div>
@@ -189,9 +189,8 @@ This proposed framework adapts validated psychological stress models from the US
 <div class="toc-entry"><div class="t">Part 3 — The Cadence</div><div class="d">Baselines, frequency, and what recording does and doesn't mean</div></div>
 <div class="toc-entry"><div class="t">Part 4 — How to Check In</div><div class="d">The seven C's, what to say, and what not to say</div></div>
 <div class="toc-entry"><div class="t">Part 5 — Escalation</div><div class="d">When it's past you, and what to do about it</div></div>
-<div class="toc-entry"><div class="t">In Closing</div><div class="d"></div></div>
 <div class="toc-entry"><div class="t">Part 6 — Crisis and Support Resources</div><div class="d">Where to route someone, and where to go yourself</div></div>
-<div class="toc-entry"><div class="t">Part 7 — Sources and Citations</div><div class="d">The receipts</div></div>
+<div class="toc-entry"><div class="t">Part 7 — Sources</div><div class="d">Where this comes from, and where the full list lives</div></div>
 <div class="toc-entry"><div class="t">Notices and Disclaimers</div><div class="d"></div></div>
 
 <div class="break"></div>
@@ -199,34 +198,24 @@ This proposed framework adapts validated psychological stress models from the US
 <p>This is the practitioner half of the Human Incident Response Framework, built for one situation: you have noticed something about a colleague, or about yourself, and there is no program, no policy, and nobody above you who is going to act.</p>
 <p>Everything here works for one person acting alone. You don't need a budget, a mandate, a title, or your leadership's permission to use any of it. That isn't an accident. It's the case the full framework was written to answer, and it's the case that most often goes unanswered.</p>
 <p>What's been left out is the material that only works when an organization decides to act: the role-by-role exposure map, and the organizational layer covering assessment instruments, policy, and what leadership owes its people. Both matter. Neither helps you on a Tuesday afternoon when someone on your team has gone quiet.</p>
-<p>The exposure drivers have been kept, because knowing why a particular seat costs what it costs is useful whether or not anyone above you ever scores it. The sources section is complete and unchanged, so you can check any claim here against its origin without going anywhere else.</p>
+<p>The exposure drivers have been kept, because knowing why a particular seat costs what it costs is useful whether or not anyone above you ever scores it. The complete source list lives in the full framework, and Part 7 here tells you where each body of work comes from.</p>
 <p>The full framework is available from the author.</p>
 
 <div class="break"></div>
 <div class="part-title">THE PREMISE</div>
-<p>The cybersecurity industry has a wellness problem and a fluency problem. We are not good at noticing what the work does to our health, and when we do notice, we often do not have the words or expertise to accurately identify the injury.</p>
-<p>We have gotten reasonably good at saying the work is hard, demanding, and stressful. We're better about naming the cost to ourselves, our loved ones, and our colleagues. Keynotes and conference talks share personal stories of injuries and acknowledge the practitioner burnout, stress, and toll of the work. None of that is wrong. It just isn't enough. Acknowledging a problem and being able to do something about it are two different things.</p>
-<p>What's missing is a shared operational vocabulary for the human side of security work. We already apply that precision everywhere else. There is a rich taxonomy and nomenclature we use to describe a wealth of things in our industry. We have a severity matrix for vulnerabilities. We use standard maturity models for detection capabilities. We have escalation paths, runbooks, and a common language so specific that "Sev2" or "Critical" or "Vulnerability" mean the same thing to everyone in the room. What we don't have is an equivalent for a teammate who's six months into a slow burnout. Or a team lead three weeks past a traumatic exposure that's still replaying on loop. Or an incident responder who is quietly carrying trauma that, technically, wasn't anyone's fault.</p>
-<p>The answers exist. They just exist in other fields. Fields that have been attacking and solving this exact problem, under harder conditions, for decades longer than cybersecurity has existed as a profession. Fields that are high-consequence, stressful, and demanding of their practitioners.</p>
-<p>The United States Navy and Marine Corps built a four-zone stress continuum to keep war fighters functional under sustained combat exposure. From that work they built Combat and Operational Stress First Aid, a peer-deliverable protocol that doesn't require a clinical license to run, subsequently adapted for fire, EMS, and law enforcement. Emergency medicine organizations built forums for processing the weight of the work as a team instead of alone. Social work and trauma research built the vocabulary and the measurement tools for secondary traumatic stress and vicarious trauma, which is harm that arrives indirectly through exposure to other people's trauma. Child welfare went a step further. They built an instrument that scores the organization, not just the person, on the theory that no amount of individual resilience training fixes a structurally broken system.</p>
-<p>None of these fields look like cybersecurity, and yet all of them attacked and answered a version of the same problem: how do you protect yourself and others when the job exposes you, again and again, as a condition of employment, to things most people never have to carry.</p>
-<p>The Human Incident Response Framework is an attempt to take a step forward for our industry; to take what these other fields have already painstakingly validated, and translate it into cyber's own language. Not because cyber is combat, or firefighting, or emergency medicine, or social work. It very much isn't, and the differences do matter. But we can still harness a wealth of published, peer-reviewed injury and stress trauma knowledge, to infer, analyze, and deploy it to help others cope, process, and heal. It might even save lives.</p>
-
-
+<p>The cybersecurity industry has a wellness problem and a fluency problem. We aren't good at noticing what the work does to our health, and when we do notice, we often don't have the words to name the injury accurately.</p>
+<p>We apply that precision everywhere else. We have a severity matrix for vulnerabilities, maturity models for detection, escalation paths, runbooks, and a common language so specific that "Sev2" means the same thing to everyone in the room. What we don't have is an equivalent for a teammate six months into a slow burnout, or a responder quietly carrying something that technically wasn't anyone's fault.</p>
+<p>The answers exist. They exist in other fields that have been solving this under harder conditions for decades: the US Navy and Marine Corps, emergency medicine, social work and trauma research, and child welfare. This guide borrows their work and translates it into ours.</p>
+<p>Four injuries get filed under one word. Burnout is workload injury and rest fixes it. Secondary traumatic stress comes from exposure to what happened to other people, and rest does nothing for it. Vicarious trauma is a slow change in worldview across years. Moral injury comes from being party to something you believe was wrong, or being stopped from doing what you believed was right. Different causes, different signals, different fixes. Only one responds to time off.</p>
+<p>The full argument, the evidence behind it, and the organizational layer are in the framework.</p>
 
 <div class="break"></div>
-<div class="part-title">BEFORE YOU USE THIS FRAMEWORK: THE TRAINING FOUNDATION</div>
-<p>Read this document first, then go get trained. This framework gives you vocabulary, a triage model, and a protocol for recognizing and responding to stress injury. What it can't give you is the judgment that comes from training, and showing up without that isn't neutral.</p>
-<p>Two bodies of work sit underneath everything here. They're structured differently from each other, and it's worth knowing how before you go looking.</p>
-<div class="sec">Stress First Aid</div>
-<p>Stress First Aid came out of the US Navy and Marine Corps, built specifically because the chain of command isn't always the right first contact for someone struggling with the weight of the work. Stress First Aid for Health Care Workers, from the National Center for PTSD, is the same model adapted for a civilian high-stress, high-consequence workforce. Same seven C's, same logic, and it's the version to start with.</p>
-<p>It isn't a certification, and there's no central body issuing one. It's a published model, and the manuals are free from the National Center for PTSD. Read them. Stress First Aid gives a non-clinical peer a structured set of actions, the seven C's, that can be delivered without a license, a clinical background, or a formal role. The check-in and escalation guidance in this framework is built on it (see Part 4), and reading the manual before you need it is the difference between running a protocol and fumbling through a conversation hoping something lands. The link is in the resources section.</p>
-<p>Instruction does exist if you want it, delivered by various institutions rather than by one authority. Duke University's School of Nursing offers Stress First Aid as a short course with continuing education credit, and a self-paced version through Coursera. The Schwartz Center for Compassionate Healthcare runs courses developed with the model's authors. Adapted versions exist for law enforcement, firefighters, and wildland fire crews.</p>
-<div class="sec">Mental Health First Aid</div>
-<p>Mental Health First Aid works the other way. It's a formal eight-hour certification course, delivered by licensed providers, that teaches you to identify, understand, and respond to signs of mental health and substance use challenges in others. It was developed in Australia in 2001 and is now a global program running in 29 countries. Over 8 million people worldwide have completed the training.</p>
-<p>Where Stress First Aid gives you the peer response protocol, Mental Health First Aid gives you the broader clinical literacy to understand what you're looking at before the protocol starts. Together they cover the two gaps that most well-meaning peers run into: not knowing what to do, and not knowing what they're seeing.</p>
-<p>The course is available in person, online, and in hybrid format, and it's free in many jurisdictions. A version exists specifically for public safety professionals. If you're outside the United States, find your country's licensed program at mhfainternational.org.</p>
-<div class="break"></div>
+<div class="part-title">BEFORE YOU USE THIS: THE TRAINING FOUNDATION</div>
+<p>Read this guide first, then go get trained. It gives you vocabulary, a triage model, and a protocol for recognizing and responding to stress injury. What it can't give you is the judgment that comes from training, and showing up without that isn't neutral.</p>
+<p>Two bodies of work sit underneath everything here, and they're structured differently from each other.</p>
+<p><strong>Stress First Aid</strong> came out of the US Navy and Marine Corps, built because the chain of command isn't always the right first contact for someone struggling with the weight of the work. Stress First Aid for Health Care Workers, from the National Center for PTSD, is the same model adapted for a civilian high-consequence workforce, and it's the version to start with. It isn't a certification and there's no central body issuing one. It's a published model and the manuals are free. Read them. The check-in and escalation guidance in Part 4 is built on them. If you want formal instruction it exists, from Duke University's School of Nursing with continuing education credit and a self-paced Coursera version, and from the Schwartz Center for Compassionate Healthcare. Adapted versions exist for law enforcement, firefighters, and wildland fire crews.</p>
+<p><strong>Mental Health First Aid</strong> works the other way. It's a formal eight-hour certification delivered by licensed providers, teaching you to identify and respond to signs of mental health and substance use challenges in others. It runs in 29 countries and over 8 million people have completed it. Free in many jurisdictions, with a version for public safety professionals. Outside the US, find your country's program at mhfainternational.org.</p>
+<p>Where Stress First Aid gives you the response protocol, Mental Health First Aid gives you the literacy to understand what you're looking at before the protocol starts. Links are in Part 6.</p>
 
 <div class="break"></div>
 <div class="part-title">PART 1 — THE ZONES</div>
@@ -507,17 +496,6 @@ This proposed framework adapts validated psychological stress models from the US
 <div class="break"></div>
 
 <div class="break"></div>
-<div class="part-title">IN CLOSING</div>
-<div class="closing">
-<p>The goal of this framework is to make the cybersecurity practitioner space a kinder, more caring, and healthier place to work.</p>
-<p>As you read this document, you may have found yourself thinking about your own hard moments, and about people you have watched struggle, or reach a crisis, without the words to name what was happening. That response is normal, and expected. It was part of the catalyst for building this framework in the first place.</p>
-<p>Finding the right words for something is a real turning point. You now have more of those words, and more resources, to go further in your own wellbeing and in helping the people around you.</p>
-<p>Be kind to yourself and to others, and keep fighting the good fight.</p>
-</div>
-
-<div class="break"></div>
-
-<div class="break"></div>
 <div class="part-title">PART 6 — CRISIS AND SUPPORT RESOURCES</div>
 <p>This section is here so it can be found fast. If you or someone alongside you needs help right now, start at the top. The crisis lines are immediate and confidential. Below them are the training and support resources this framework refers to throughout.</p>
 <div class="crisisbox">
@@ -547,48 +525,9 @@ This proposed framework adapts validated psychological stress models from the US
 <div class="break"></div>
 
 <div class="break"></div>
-<div class="part-title">PART 7 — SOURCES AND CITATIONS</div>
-<p class="srcnote">Academic and peer-reviewed literature is listed first within each category, followed by institutional doctrine, then practitioner and reference resources.</p>
-<div class="sec">Peer-Reviewed Literature and Academic Research</div>
-<div class="src"><strong>Figley, C.R. (1995).</strong> Compassion Fatigue: Coping with Secondary Traumatic Stress Disorder in Those Who Treat the Traumatized. Brunner/Mazel, New York.</div>
-<div class="src"><strong>Figley, C.R. (2002).</strong> Treating Compassion Fatigue. Brunner-Routledge, New York.</div>
-<div class="src"><strong>Bride, B.E., Robinson, M.M., Yegidis, B., &amp; Figley, C.R. (2004).</strong> Development and validation of the Secondary Traumatic Stress Scale. Research on Social Work Practice, 14(1), 27-35.</div>
-<div class="src"><strong>Bride, B.E. (2007).</strong> Prevalence of secondary traumatic stress among social workers. Social Work, 52(1), 63-70.</div>
-<div class="src"><strong>McCann, I.L., &amp; Pearlman, L.A. (1990).</strong> Vicarious traumatization: A framework for understanding the psychological effects of working with victims. Journal of Traumatic Stress, 3(1), 131-149.</div>
-<div class="src"><strong>Litz, B.T., Stein, N., Delaney, E., Lebowitz, L., Nash, W.P., Silva, C., &amp; Maguen, S. (2009).</strong> Moral injury and moral repair in war veterans: A preliminary model and intervention strategy. Clinical Psychology Review, 29(8), 695-706.</div>
-<div class="src"><strong>Maslach, C., &amp; Jackson, S.E. (1981).</strong> The measurement of experienced burnout. Journal of Organizational Behavior, 2(2), 99-113.</div>
-<div class="src"><strong>Leiter, M.P., &amp; Maslach, C. (2003).</strong> Areas of Worklife: A Structured Approach to Organizational Predictors of Job Burnout. In P.L. Perrewe &amp; D.C. Ganster (Eds.), Emotional and Physiological Processes and Positive Intervention Strategies (pp. 91-134.</div>
-<div class="src"><strong>Kristensen, T.S., Borritz, M., Villadsen, E., &amp; Christensen, K.B. (2005).</strong> The Copenhagen Burnout Inventory: A new tool for the assessment of burnout. Work &amp; Stress, 19(3), 192-207. https://doi.org/10.1080/02678370500297720.</div>
-<div class="src"><strong>Demerouti, E., Bakker, A.B., Nachreiner, F., &amp; Schaufeli, W.B. (2001).</strong> The Job Demands-Resources Model of Burnout. Journal of Applied Psychology, 86(3), 499-512. https://doi.org/10.1037/0021-9010.86.3.499.</div>
-<div class="src"><strong>Stamm, B.H. (2010).</strong> The Concise ProQOL Manual (2nd ed.). ProQOL.org, Pocatello, ID. https://proqol.org.</div>
-<div class="src"><strong>Bourke, M.L., &amp; Craun, S.W. (2014).</strong> Secondary traumatic stress among Internet Crimes Against Children Task Force personnel: impact, risk factors, and coping strategies. Sexual Abuse, 26(6), 586-609. https://doi.org/10.1177/1079063213509411.</div>
-<div class="src"><strong>Edelmann, R.J. (2010).</strong> Exposure to child abuse images as part of one's work: possible psychological implications. Journal of Forensic Psychiatry &amp; Psychology, 21(4), 481-489. https://doi.org/10.1080/14789940903540792.</div>
-<div class="src"><strong>Strickland, C., Kloess, J.A., &amp; Larkin, M. (2023).</strong> An exploration of the personal experiences of digital forensics analysts who work with child sexual abuse material on a daily basis: "you cannot unsee the darker side of life". Frontiers in Psychology, 14:1142106. https://doi.org/10.3389/fpsyg.2023.1142106.</div>
-<div class="src"><strong>Brady, P.Q. (2017).</strong> Crimes against caring: exploring the risk of secondary traumatic stress, burnout, and compassion satisfaction among child exploitation investigators. Journal of Police and Criminal Psychology, 32(4), 305-318. https://doi.org/10.1007/s11896-016-9223-8.</div>
-<div class="src"><strong>Sprang, G., Ford, J., Kerig, P., &amp; Bride, B. (2019).</strong> Defining Secondary Traumatic Stress and Developing Targeted Assessments and Interventions. Traumatology, 25(2), 72-83.</div>
-<div class="src"><strong>Bride, B.E., Jones, J.L., &amp; MacMaster, S.A. (2007).</strong> Correlates of secondary traumatic stress in child protective services workers. Journal of Evidence-Based Social Work, 4(3-4), 69-80. https://doi.org/10.1300/J394v04n03_05.</div>
-<div class="src"><strong>Aust, B., Leduc, C., Cresswell-Smith, J., O'Brien, C., Rugulies, R., et al. (2024).</strong> The effects of different types of organisational workplace mental health interventions on mental health and wellbeing in healthcare workers: a systematic review. International Archives of Occupational and Environmental Health, 97(5), 485-522. https://doi.org/10.1007/s00420-024-02065-z.</div>
-<div class="src"><strong>Everly, G.S., &amp; Lating, J.M. (2019).</strong> A Clinical Guide to the Treatment of the Human Stress Response (4th ed.). Springer, New York. https://doi.org/10.1007/978-1-4939-9098-6. General reference on the human stress response and its clinical treatment. Not the source of Stress First Aid or the seven C's, which come from the National Center for PTSD (see below).</div>
-<div class="src"><strong>Jenkins, S.R., &amp; Baird, S. (2002).</strong> Secondary traumatic stress and vicarious trauma: A validational study. Journal of Traumatic Stress, 15(5), 423-432.</div>
-<div class="src"><strong>Sundaramurthy, S.C., Bardas, A.G., Case, J., Ou, X., Wesch, M., McHugh, J., &amp; Rajagopalan, S.R. (2015).</strong> A Human Capital Model for Mitigating Security Analyst Burnout. Symposium on Usable Privacy and Security (SOUPS 2015), 347-359.</div>
-<div class="src"><strong>Nepal, S., Hernandez, J., Lewis, R., et al. (2024).</strong> Burnout in Cybersecurity Incident Responders: Exploring the Factors that Light the Fire. Proceedings of the ACM on Human-Computer Interaction, 8, CSCW1, Article 27 (April 2024).</div>
-<div class="src"><strong>Rangarajan, A., Nobles, C., Dykstra, J., Cunningham, M., Robinson, N., Hollis, T., Paul, C.L., &amp; Gulotta, C. (2025).</strong> A Roadmap to Address Burnout in the Cybersecurity Profession: Outcomes from a Multifaceted Workshop. arXiv:2502.10293. Presented at the 26th International Conference on Human-Computer Interaction. https://arxiv.org/pdf/2502.10293</div>
-<div class="src"><strong>Keenan, P., &amp; Royle, L. (2007).</strong> Vicarious Trauma and First Responders: A Case Study Utilizing Eye Movement Desensitization and Reprocessing (EMDR) as the Primary Treatment Modality. International Journal of Emergency Mental Health, 9(4), 291-298.</div>
-<div class="sec">Institutional Research</div>
-<div class="src"><strong>Sudkamp, K.M., Williams, H.J., Jaycox, L.H., Dunigan, M., &amp; Young, S. (2022).</strong> Trauma in the U.S. Intelligence Community: Risks and Responses. RAND Corporation, PE-A1027-1. https://www.rand.org/pubs/perspectives/PEA1027-1.html. Examined trauma exposure across 18 intelligence community agencies. Found that indirect trauma is a significant and largely unaddressed problem, that personnel bound by law to secrecy face heightened risk and constrained recourse for managing it, and that the community has limited understanding both of trauma symptoms and of the parameters governing where such discussions can take place. Closest published analog to role-specific psychological mapping in a national security context. Cited in Parts 2 and 3.</div>
-<div class="src"><strong>Office of the US Surgeon General (2022).</strong> The US Surgeon General's Framework for Workplace Mental Health and Well-Being. US Department of Health and Human Services. https://www.hhs.gov/surgeongeneral/reports-and-publications/workplace-well-being.</div>
-<div class="src"><strong>Sprang, G., Ross, L., Miller, B., Blackshear, K., &amp; Ascienzo, S. (2017).</strong> Psychometric Properties of the Secondary Traumatic Stress Informed Organizational Assessment. Traumatology, 23(2), 165-171. https://doi.org/10.1037/trm0000108. Instrument download: https://ctac.uky.edu/stsi-oa.</div>
-<div class="src"><strong>Sprang, G., Lei, F., &amp; Bush, H. (2021).</strong> Can Organizational Efforts Lead to Less Secondary Traumatic Stress? A Longitudinal Investigation of Change. American Journal of Orthopsychiatry, 91(4), 443-453. https://doi.org/10.1037/ort0000546.</div>
-<div class="src"><strong>Hallinan, S., Shiyko, M.P., Volpe, R., &amp; Molnar, B.E. (2019).</strong> Reliability and validity of the Vicarious Trauma Organizational Readiness Guide (VT-ORG). American Journal of Community Psychology, 64(3-4), 481-493. https://doi.org/10.1002/ajcp.12395.</div>
-<div class="src"><strong>National Children's Advocacy Center (2025).</strong> Secondary Traumatic Stress and Vicarious Trauma Among Professionals Who Work with Victims of Child Maltreatment: A Bibliography. Huntsville, AL. Supported by a grant from the Office of Juvenile Justice and Delinquency Prevention, US Department of Justice. https://files.calio.org/BIBS/STS_vicarious_trauma_bib_NCAC06_250807.pdf. An annotated, regularly updated bibliography of the STS, vicarious trauma, compassion fatigue, and burnout literature for professionals working in fields associated with child maltreatment, with abstracts and links to full text. Listed here as a research entry point for readers who want to go past the sources cited in this document.</div>
-<div class="src"><strong>Sprang, G., Miech, E.J., &amp; Gusler, S. (2023).</strong> The role of secondary traumatic stress breakthrough champions in reducing worker trauma and improving organizational health using a configurational analysis approach. Implementation Research and Practice, 4. https://doi.org/10.1177/26334895231164582.</div>
-<div class="sec">Military Doctrine and Operational Manuals</div>
-<div class="src"><strong>US Navy / US Marine Corps (2010, reissued 2016 as MCTP 3-30E).</strong> Combat and Operational Stress Control. Department of the Navy. Approved for public release, no distribution restrictions. Primary source for the four-zone stress continuum model and organizational accountability framework.</div>
-<div class="src"><strong>US Marine Corps (2013, updated). MCO 5351.1A</strong> — Marine Corps Combat and Operational Stress Control Program. Headquarters United States Marine Corps. Primary source for the organizational accountability language in the full framework.</div>
-<div class="src"><strong>Watson, P., &amp; Westphal, R.J. (National Center for PTSD).</strong> Stress First Aid for Health Care Workers. U.S. Department of Veterans Affairs, National Center for PTSD. Free and publicly available; the health care adaptation of the Stress First Aid model, developed for civilian high-stress professions. Primary operational source for Part 4. https://www.ptsd.va.gov/professional/treat/type/stress_first_aid.asp</div>
-<p class="srcnote">The author welcomes corrections, additions, and challenges to the inference-based role-to-injury mapping in Part 2.</p>
-
-<div class="break"></div>
+<div class="part-title">PART 7 — SOURCES</div>
+<p>Secondary traumatic stress and compassion fatigue: Figley. Vicarious trauma: McCann and Pearlman. Moral injury: Litz and colleagues. Burnout, the six areas of worklife, and the job demands-resources model: Maslach, Leiter, Demerouti, Kristensen. The four-zone stress continuum and Combat and Operational Stress Control doctrine: the US Navy and US Marine Corps. Stress First Aid and the seven C's: Watson and Westphal, National Center for PTSD. Organizational assessment for secondary traumatic stress: Sprang and colleagues, University of Kentucky.</p>
+<p>The complete reference list, with page numbers, DOIs, and links, is in the full framework.</p>
 
 <div class="break"></div>
 <div class="part-title">NOTICES AND DISCLAIMERS</div>
