@@ -122,7 +122,7 @@ The complete source list, with page numbers and DOIs, is in the documents themse
 ```
 Marshall, J. (2026). The Human Incident Response Framework:
 A Practitioner Wellbeing Framework for Cybersecurity Operations.
-[version]. [DOI to be added]
+Version 1.6.60. Zenodo. https://doi.org/10.5281/zenodo.22821413
 ```
 
 ## Contributing
