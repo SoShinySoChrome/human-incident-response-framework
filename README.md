@@ -7,7 +7,9 @@ This repository contains the **Human Incident Response Framework**, a practition
 > ### If you or someone you know needs help right now
 >
 > **United States** — call or text **988** (Suicide & Crisis Lifeline), or call **911**
+>
 > **Anywhere** — **[findahelpline.com](https://findahelpline.com)** lists free, confidential support lines by country
+>
 > **US veterans and service members** — call **988**, then press **1**
 >
 > You don't need to read anything below first.
